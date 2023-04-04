@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.hibernate.d24.controller.LoginFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="primaryPane" prefHeight="1000.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.d24.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="1000.0" fitWidth="1700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/LoginFormSketch.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtFldUsername" focusColor="#159895" labelFloat="true" layoutX="362.0" layoutY="509.0" prefHeight="53.0" prefWidth="391.0" promptText="Username" unFocusColor="#159895">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFldPassword" focusColor="#159895" labelFloat="true" layoutX="361.0" layoutY="630.0" prefHeight="53.0" prefWidth="391.0" promptText="Password" unFocusColor="#159895">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="310.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/Username.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="308.0" layoutY="646.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/Password.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="340.0" layoutY="760.0" onAction="#btnSignInOnActiom" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #159895;" text="Sign In" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="35.0" layoutY="30.0" onAction="#btnCloseOnAction" style="-fx-background-color: #FF0000;" text="Close" textFill="WHITE" />
+   </children>
 </AnchorPane>
