@@ -22,7 +22,7 @@ public class AppInitializer extends Application {
         Parent window = FXMLLoader.load(resource);
         Scene scene = new Scene(window);
         primaryStage.setScene(scene);primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setTitle("Spice System");
+        primaryStage.setTitle("D24 Hostel Service");
         primaryStage.centerOnScreen();
 
         primaryStage.show();
