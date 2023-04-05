@@ -1,5 +1,5 @@
 package lk.ijse.hibernate.d24.util;
 
 public enum Routes {
-    LOGIN
+    LOGIN, DASHBOARDFORM
 }

@@ -20,11 +20,16 @@ public class Navigation {
                 window.setTitle("");
                 break;
 
+            case DASHBOARDFORM:
+                initUI("DashboardForm.fxml");
+                window.setTitle("");
+                break;
+
             default:
                 new Alert(Alert.AlertType.ERROR, "Not suitable UI found!").show();
         }
     }
     private static void initUI(String location) throws IOException {
-        Navigation.pane.getChildren().add(FXMLLoader.load(Navigation.class.getResource("/lk/ijse/spicesystem/view/" + location)));
+        Navigation.pane.getChildren().add(FXMLLoader.load(Navigation.class.getResource("/lk/ijse/hibernate//d24/view/" + location)));
     }
 }
