@@ -14,12 +14,12 @@
             <Image url="@assest/LoginFormSketch.jpg" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtFldUsername" focusColor="#159895" labelFloat="true" layoutX="362.0" layoutY="509.0" prefHeight="53.0" prefWidth="391.0" promptText="Username" unFocusColor="#159895">
+      <JFXTextField fx:id="txtFldUsername" focusColor="#159895" labelFloat="true" layoutX="362.0" layoutY="509.0" prefHeight="53.0" prefWidth="391.0" promptText="Username" stylesheets="@css/Login.css" unFocusColor="#159895">
          <font>
             <Font size="24.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtFldPassword" focusColor="#159895" labelFloat="true" layoutX="361.0" layoutY="630.0" prefHeight="53.0" prefWidth="391.0" promptText="Password" unFocusColor="#159895">
+      <JFXTextField fx:id="txtFldPassword" focusColor="#159895" labelFloat="true" layoutX="361.0" layoutY="630.0" prefHeight="53.0" prefWidth="391.0" promptText="Password" stylesheets="@css/Login.css" unFocusColor="#159895">
          <font>
             <Font size="24.0" />
          </font>
@@ -39,6 +39,6 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="35.0" layoutY="30.0" onAction="#btnCloseOnAction" style="-fx-background-color: #FF0000;" text="Close" textFill="WHITE" />
+      <JFXButton layoutX="22.0" layoutY="15.0" onAction="#btnCloseOnAction" prefHeight="12.0" prefWidth="15.0" style="-fx-background-color: #FF0000;" text="X" textFill="WHITE" />
    </children>
 </AnchorPane>

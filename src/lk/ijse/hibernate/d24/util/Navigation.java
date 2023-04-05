@@ -25,6 +25,11 @@ public class Navigation {
                 window.setTitle("");
                 break;
 
+            case STUDENTFORM:
+                initUI("DashboardStudentForm.fxml");
+                window.setTitle("");
+                break;
+
             default:
                 new Alert(Alert.AlertType.ERROR, "Not suitable UI found!").show();
         }

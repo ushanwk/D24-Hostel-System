@@ -7,7 +7,3 @@
     -fx-text-fill: #159895;
     -fx-background-color: #FFFFFF;
 }
-
-.button:pressed{
-    -fx-text-fill: #159895;
-}

@@ -1,0 +1,7 @@
+.text-field {
+    -fx-prompt-text-fill: #159895;
+}
+
+.text-field:focused{
+    -fx-prompt-text-fill: #129592;
+}

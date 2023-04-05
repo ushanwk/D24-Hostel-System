@@ -21,17 +21,17 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <JFXButton layoutX="1078.0" layoutY="30.0" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Reservation">
+      <JFXButton layoutX="1078.0" layoutY="30.0" onAction="#btnReservationOnAction" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Reservation">
          <font>
             <Font name="Helvetica Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1232.0" layoutY="31.0" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Students">
+      <JFXButton layoutX="1232.0" layoutY="31.0" onAction="#btnStudentOnAction" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Students">
          <font>
             <Font name="Helvetica Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1356.0" layoutY="31.0" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Room">
+      <JFXButton layoutX="1356.0" layoutY="31.0" onAction="#btnRoomOnAction" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Room">
          <font>
             <Font name="Helvetica Bold" size="20.0" />
          </font>
