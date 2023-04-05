@@ -1,9 +1,8 @@
 package lk.ijse.hibernate.d24.controller;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import lk.ijse.hibernate.d24.util.Navigation;
 import lk.ijse.hibernate.d24.util.Routes;
@@ -26,6 +25,11 @@ public class DashboardFormController {
         Navigation.navigate(Routes.STUDENTFORM, secondaryPane);
     }
 
-    public void btnRoomOnAction(ActionEvent actionEvent) {
+    public void btnRoomOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.ROOMFORM, secondaryPane);
+    }
+
+    public void btnStudentRegOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.STUDENTFORM, secondaryPane);
     }
 }

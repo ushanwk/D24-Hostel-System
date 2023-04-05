@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="904.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.d24.controller.DashboardStudentFormController">
    <children>
@@ -16,5 +20,65 @@
             <Image url="@assest/StudentManagementText.png" />
          </image>
       </ImageView>
+      <Text fill="WHITE" layoutX="132.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Registration" underline="true">
+         <font>
+            <Font name="Helvetica Bold" size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="134.0" layoutY="444.0" prefHeight="40.0" prefWidth="291.0" promptText="Student ID" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="134.0" layoutY="545.0" prefHeight="40.0" prefWidth="642.0" promptText="Name" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="134.0" layoutY="648.0" prefHeight="40.0" prefWidth="293.0" promptText="Address" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="484.0" layoutY="648.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="135.0" layoutY="754.0" prefHeight="40.0" prefWidth="293.0" promptText="Gender" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="277.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/GlossyTab.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="569.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/GlossyTab.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="862.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/GlossyTab.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="1154.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/GlossyTab.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="688.0" layoutY="760.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="603.0" layoutY="760.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

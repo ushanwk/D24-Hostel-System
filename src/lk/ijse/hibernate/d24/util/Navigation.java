@@ -30,6 +30,11 @@ public class Navigation {
                 window.setTitle("");
                 break;
 
+            case ROOMFORM:
+                initUI("DashboardRoomForm.fxml");
+                window.setTitle("");
+                break;
+
             default:
                 new Alert(Alert.AlertType.ERROR, "Not suitable UI found!").show();
         }
