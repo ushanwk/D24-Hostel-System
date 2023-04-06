@@ -18,7 +18,6 @@ public class ReservationEntity {
     @Id
     @Column(length = 20)
     String resId;
-    @Column
     Date date;
     @JoinColumn(name = "studentId", referencedColumnName = "studentId")
     @ManyToOne
@@ -27,4 +26,5 @@ public class ReservationEntity {
     @ManyToOne
     RoomEntity room;
     String status;
+    boolean keyMoney;
 }

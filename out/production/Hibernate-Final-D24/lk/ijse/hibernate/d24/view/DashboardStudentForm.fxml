@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -25,31 +28,50 @@
             <Font name="Helvetica Bold" size="25.0" />
          </font>
       </Text>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="134.0" layoutY="444.0" prefHeight="40.0" prefWidth="291.0" promptText="Student ID" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+      <Group layoutX="134.0" layoutY="444.0">
+         <children>
+            <JFXTextField fx:id="txtFldStudentIdReg" focusColor="WHITE" labelFloat="true" prefHeight="40.0" prefWidth="291.0" promptText="Student ID" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldNameReg" focusColor="WHITE" labelFloat="true" layoutY="101.0" prefHeight="40.0" prefWidth="299.0" promptText="Name" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldAddressReg" focusColor="WHITE" labelFloat="true" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Address" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldDobReg" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="101.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldGenderReg" focusColor="WHITE" labelFloat="true" layoutX="1.0" layoutY="310.0" prefHeight="40.0" prefWidth="293.0" promptText="Gender" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldTelReg" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Telephone" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Group>
+      <JFXButton layoutX="688.0" layoutY="760.0" onAction="#btnRegisterOnAction" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Register" textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
-      </JFXTextField>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="134.0" layoutY="545.0" prefHeight="40.0" prefWidth="642.0" promptText="Name" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+      </JFXButton>
+      <JFXButton layoutX="603.0" layoutY="760.0" onAction="#btnClearOnAction" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Clear" textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
-      </JFXTextField>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="134.0" layoutY="648.0" prefHeight="40.0" prefWidth="293.0" promptText="Address" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </JFXTextField>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="484.0" layoutY="648.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </JFXTextField>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="135.0" layoutY="754.0" prefHeight="40.0" prefWidth="293.0" promptText="Gender" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </JFXTextField>
+      </JFXButton>
       <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="277.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assest/GlossyTab.png" />
@@ -70,12 +92,53 @@
             <Image url="@assest/GlossyTab.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="688.0" layoutY="760.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Register" textFill="WHITE">
+      <Line endX="30.66015625" endY="231.76580810546875" layoutX="828.0" layoutY="537.0" opacity="0.25" startX="30.66015625" startY="-112.91738891601562" stroke="WHITE" strokeWidth="0.5" />
+      <Text fill="WHITE" layoutX="912.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Update &amp; Delete" underline="true">
+         <font>
+            <Font name="Helvetica Bold" size="25.0" />
+         </font>
+      </Text>
+      <Group layoutX="911.0" layoutY="446.0">
+         <children>
+            <Text fill="WHITE" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID :">
+               <font>
+                  <Font name="Helvetica" size="23.0" />
+               </font>
+            </Text>
+            <JFXComboBox focusColor="WHITE" labelFloat="true" layoutX="132.0" layoutY="6.0" prefHeight="33.0" prefWidth="121.0" promptText="Select ID" stylesheets="@css/StudentComboBox.css" unFocusColor="WHITE" />
+            <JFXTextField focusColor="WHITE" labelFloat="true" layoutY="101.0" prefHeight="40.0" prefWidth="642.0" promptText="Name" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField focusColor="WHITE" labelFloat="true" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Address" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="1.0" layoutY="310.0" prefHeight="40.0" prefWidth="293.0" promptText="Gender" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Group>
+      <JFXButton layoutX="1472.0" layoutY="761.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="603.0" layoutY="760.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Clear" textFill="WHITE">
+      <JFXButton layoutX="1381.0" layoutY="761.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1278.0" layoutY="761.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="View All" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

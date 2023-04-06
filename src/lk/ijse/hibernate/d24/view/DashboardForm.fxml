@@ -19,7 +19,7 @@
                   <Image url="@assest/DashboardMainFormSketch.jpg" />
                </image>
             </ImageView>
-            <JFXButton layoutX="723.0" layoutY="726.0" onAction="#btnStudentRegOnAction" style="-fx-border-color: white; -fx-border-width: 3;" stylesheets="@css/DashboardMain.css" text="Student Registration" textFill="WHITE">
+            <JFXButton layoutX="723.0" layoutY="726.0" onAction="#btnStudentRegOnAction" stylesheets="@css/DashboardMain.css" text="Student Registration" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="20.0" />
                </font>

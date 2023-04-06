@@ -16,6 +16,6 @@ public class StudentDTO {
     String name;
     String address;
     String gender;
-    Date date;
+    Date dob;
     String tel;
 }

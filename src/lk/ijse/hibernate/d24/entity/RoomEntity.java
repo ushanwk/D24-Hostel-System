@@ -19,11 +19,8 @@ public class RoomEntity {
     @Id
     @Column(length = 20)
     private String roomTypeId;
-    @Column
     private String type;
-    @Column
     private String keyMoney;
-    @Column
     private int qty;
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
     private List<ReservationEntity> resList = new ArrayList<>();
