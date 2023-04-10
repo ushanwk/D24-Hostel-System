@@ -46,4 +46,17 @@ public class StudentBOImpl implements StudentBO {
                 studentDTO.getGender(),
                 new ArrayList<>()));
     }
+
+    @Override
+    public StudentDTO searchStudent(String id) {
+        StudentEntity student = studentRepository.search(id);
+        return new StudentDTO(
+                student.getStudentId(),
+                student.getName(),
+                student.getAddress(),
+                student.getGender(),
+                student.getDOB(),
+                student.getTel()
+        );
+    }
 }

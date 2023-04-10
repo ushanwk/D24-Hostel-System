@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Group?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -105,40 +105,45 @@
                   <Font name="Helvetica" size="23.0" />
                </font>
             </Text>
-            <JFXComboBox focusColor="WHITE" labelFloat="true" layoutX="132.0" layoutY="6.0" prefHeight="33.0" prefWidth="121.0" promptText="Select ID" stylesheets="@css/StudentComboBox.css" unFocusColor="WHITE" />
-            <JFXTextField focusColor="WHITE" labelFloat="true" layoutY="101.0" prefHeight="40.0" prefWidth="642.0" promptText="Name" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldNameSearch" focusColor="WHITE" labelFloat="true" layoutY="101.0" prefHeight="40.0" prefWidth="296.0" promptText="Name" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField focusColor="WHITE" labelFloat="true" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Address" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldAddressSearch" focusColor="WHITE" labelFloat="true" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Address" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldSDobSearch" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="1.0" layoutY="310.0" prefHeight="40.0" prefWidth="293.0" promptText="Gender" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldGenderSearch" focusColor="WHITE" labelFloat="true" layoutX="1.0" layoutY="310.0" prefHeight="40.0" prefWidth="293.0" promptText="Gender" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <TextField fx:id="txtFldStdentIdSearch" layoutX="129.0" layoutY="10.0" onAction="#txtFldSearchIdOnAction" prefHeight="27.0" prefWidth="97.0" />
+            <JFXTextField fx:id="txtFldTelSearch" focusColor="WHITE" labelFloat="true" layoutX="349.0" layoutY="103.0" prefHeight="40.0" prefWidth="293.0" promptText="Telephone" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
          </children>
       </Group>
-      <JFXButton layoutX="1472.0" layoutY="761.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Update" textFill="WHITE">
+      <JFXButton layoutX="1472.0" layoutY="761.0" onAction="#btnUpdateOnAcion" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1381.0" layoutY="761.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Delete" textFill="WHITE">
+      <JFXButton layoutX="1381.0" layoutY="761.0" onAction="#btnDeleteOnAcion" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Delete" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="1278.0" layoutY="761.0" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="View All" textFill="WHITE">
+      <JFXButton layoutX="1278.0" layoutY="761.0" onAction="#btnViewAllOnAcion" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="View All" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

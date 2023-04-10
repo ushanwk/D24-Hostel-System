@@ -6,6 +6,8 @@ import lk.ijse.hibernate.d24.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class StudentRepositoryImpl implements StudentRepository {
     @Override
     public boolean save(StudentEntity entity) {
@@ -44,5 +46,23 @@ public class StudentRepositoryImpl implements StudentRepository {
         session.close();
 
         return true;
+    }
+
+    @Override
+    public StudentEntity search(String id) {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        StudentEntity student = session.get(StudentEntity.class, id);
+
+        transaction.commit();
+        session.close();
+
+        return student;
+    }
+
+    @Override
+    public List<StudentEntity> getAll() {
+        return null;
     }
 }
