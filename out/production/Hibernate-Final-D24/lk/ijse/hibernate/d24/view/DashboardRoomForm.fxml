@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="904.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.d24.controller.DashboardRoomFormController">
    <children>
@@ -16,5 +23,110 @@
             <Image url="@assest/RoomManagementText.png" />
          </image>
       </ImageView>
+      <Text fill="WHITE" layoutX="132.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Add" underline="true">
+         <font>
+            <Font name="Helvetica Bold" size="25.0" />
+         </font>
+      </Text>
+      <Group layoutX="134.0" layoutY="444.0">
+         <children>
+            <JFXTextField fx:id="txtFldRoomTypeIdReg" focusColor="WHITE" labelFloat="true" prefHeight="40.0" prefWidth="291.0" promptText="Rooom Type ID" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldRoomTypeReg" focusColor="WHITE" labelFloat="true" layoutY="101.0" prefHeight="40.0" prefWidth="299.0" promptText="Type" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldQtyReg" focusColor="WHITE" labelFloat="true" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Quantity" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldKeyMoneyReg" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="101.0" prefHeight="40.0" prefWidth="293.0" promptText="Key Money" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Group>
+      <JFXButton layoutX="688.0" layoutY="760.0" onAction="#btnRegisterOnAction" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="603.0" layoutY="760.0" onAction="#btnClearOnAction" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="277.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/GlossyTab.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="569.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/GlossyTab.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="862.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/GlossyTab.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="1154.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/GlossyTab.png" />
+         </image>
+      </ImageView>
+      <Line endX="30.66015625" endY="231.76580810546875" layoutX="828.0" layoutY="537.0" opacity="0.25" startX="30.66015625" startY="-112.91738891601562" stroke="WHITE" strokeWidth="0.5" />
+      <Text fill="WHITE" layoutX="912.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Update &amp; Delete" underline="true">
+         <font>
+            <Font name="Helvetica Bold" size="25.0" />
+         </font>
+      </Text>
+      <Group layoutX="911.0" layoutY="446.0">
+         <children>
+            <Text fill="WHITE" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Type ID :">
+               <font>
+                  <Font name="Helvetica" size="23.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtFldTypeSearch" focusColor="WHITE" labelFloat="true" layoutY="101.0" prefHeight="40.0" prefWidth="296.0" promptText="Type" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldQtySearch" focusColor="WHITE" labelFloat="true" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Quantity" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFldSKeyMoneySearch" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="107.0" prefHeight="40.0" prefWidth="293.0" promptText="Key Money" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <TextField fx:id="txtFldRoomTypeIdSearch" layoutX="169.0" layoutY="9.0" onAction="#txtFldRoomTypeIdOnAction" prefHeight="27.0" prefWidth="97.0" />
+         </children>
+      </Group>
+      <JFXButton layoutX="1472.0" layoutY="761.0" onAction="#btnUpdateOnAcion" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1381.0" layoutY="761.0" onAction="#btnDeleteOnAcion" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1278.0" layoutY="761.0" onAction="#btnViewAllOnAcion" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="View All" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

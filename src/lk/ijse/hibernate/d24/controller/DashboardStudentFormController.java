@@ -24,6 +24,7 @@ public class DashboardStudentFormController {
     public TextField txtFldStdentIdSearch;
     public JFXTextField txtFldTelSearch;
 
+
     StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.STUDENT);
 
     public void initialize(){
@@ -120,4 +121,5 @@ public class DashboardStudentFormController {
         }
 
     }
+
 }
