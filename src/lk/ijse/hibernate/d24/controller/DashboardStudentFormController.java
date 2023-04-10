@@ -27,7 +27,7 @@ public class DashboardStudentFormController {
     StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.STUDENT);
 
     public void initialize(){
-        clear();
+        clearSearch();clearReg();
     }
 
     public void btnRegisterOnAction(ActionEvent actionEvent) {
@@ -41,14 +41,18 @@ public class DashboardStudentFormController {
 
         ));
 
-        clear();
+
+        new Alert(Alert.AlertType.CONFIRMATION,"Student Registered Successfully").show();
+
+        clearReg();
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
-        clear();
+        clearSearch();
+        clearReg();
     }
 
-    private void clear(){
+    private void clearReg(){
         txtFldStudentIdReg.clear();
         txtFldNameReg.clear();
         txtFldAddressReg.clear();
@@ -57,29 +61,42 @@ public class DashboardStudentFormController {
         txtFldTelReg.clear();
     }
 
+    private void clearSearch(){
+        txtFldStdentIdSearch.clear();
+        txtFldNameSearch.clear();
+        txtFldAddressSearch.clear();
+        txtFldSDobSearch.clear();
+        txtFldGenderSearch.clear();
+        txtFldTelSearch.clear();
+    }
+
+
     public void btnUpdateOnAcion(ActionEvent actionEvent) {
         studentBO.updateStudent(new StudentDTO(
                 txtFldStdentIdSearch.getText(),
                 txtFldNameSearch.getText(),
-                txtFldAddressReg.getText(),
+                txtFldAddressSearch.getText(),
                 txtFldGenderSearch.getText(),
                 Date.valueOf(txtFldSDobSearch.getText()),
                 txtFldTelSearch.getText()
         ));
-        clear();
+
+        new Alert(Alert.AlertType.CONFIRMATION,"Student Updated Successfully").show();
+
+        clearSearch();
     }
 
     public void btnDeleteOnAcion(ActionEvent actionEvent) {
         studentBO.deleteStudent(new StudentDTO(
                 txtFldStdentIdSearch.getText(),
                 txtFldNameSearch.getText(),
-                txtFldAddressReg.getText(),
+                txtFldAddressSearch.getText(),
                 txtFldGenderSearch.getText(),
                 Date.valueOf(txtFldSDobSearch.getText()),
                 txtFldTelSearch.getText()
 
         ));
-        clear();
+        clearSearch();
     }
 
     public void btnViewAllOnAcion(ActionEvent actionEvent) {
@@ -98,7 +115,8 @@ public class DashboardStudentFormController {
             txtFldStdentIdSearch.setText(studentDTO.getStudentID());
 
         }catch (Exception e){
-            new Alert(Alert.AlertType.WARNING).show();
+            new Alert(Alert.AlertType.WARNING,"Student ID not Found").show();
+            clearSearch();
         }
 
     }

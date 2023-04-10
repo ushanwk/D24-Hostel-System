@@ -11,6 +11,7 @@ import java.util.List;
 public class StudentRepositoryImpl implements StudentRepository {
     @Override
     public boolean save(StudentEntity entity) {
+
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 

@@ -115,7 +115,7 @@
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtFldSDobSearch" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldSDobSearch" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="107.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -126,7 +126,7 @@
                </font>
             </JFXTextField>
             <TextField fx:id="txtFldStdentIdSearch" layoutX="129.0" layoutY="10.0" onAction="#txtFldSearchIdOnAction" prefHeight="27.0" prefWidth="97.0" />
-            <JFXTextField fx:id="txtFldTelSearch" focusColor="WHITE" labelFloat="true" layoutX="349.0" layoutY="103.0" prefHeight="40.0" prefWidth="293.0" promptText="Telephone" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldTelSearch" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="207.0" prefHeight="40.0" prefWidth="293.0" promptText="Telephone" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
