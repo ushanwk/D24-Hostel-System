@@ -2,6 +2,7 @@ package lk.ijse.hibernate.d24.controller;
 
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import lk.ijse.hibernate.d24.bo.BOFactory;
 import lk.ijse.hibernate.d24.bo.custom.RoomBO;
@@ -45,6 +46,8 @@ public class DashboardRoomFormController {
                 Integer.valueOf(txtFldQtyReg.getText()),
                 txtFldRoomTypeReg.getText()
         ));
+
+        new Alert(Alert.AlertType.CONFIRMATION,"Room Added Successfully").show();
         clearReg();
     }
 
@@ -54,12 +57,21 @@ public class DashboardRoomFormController {
     }
 
     public void txtFldRoomTypeIdOnAction(ActionEvent actionEvent) {
-        RoomDTO roomDTO = roomBO.searchRoom(txtFldRoomTypeIdSearch.getText());
 
-        txtFldRoomTypeIdSearch.setText(roomDTO.getRoomTypeID());
-        txtFldTypeSearch.setText(roomDTO.getType());
-        txtFldSKeyMoneySearch.setText(roomDTO.getKeyMoney());
-        txtFldQtySearch.setText(String.valueOf(roomDTO.getQty()));
+        try {
+            RoomDTO roomDTO = roomBO.searchRoom(txtFldRoomTypeIdSearch.getText());
+
+            txtFldRoomTypeIdSearch.setText(roomDTO.getRoomTypeID());
+            txtFldTypeSearch.setText(roomDTO.getType());
+            txtFldSKeyMoneySearch.setText(roomDTO.getKeyMoney());
+            txtFldQtySearch.setText(String.valueOf(roomDTO.getQty()));
+
+        }catch (Exception e){
+            new Alert(Alert.AlertType.WARNING,"Room not Found").show();
+            clearSearch();
+        }
+
+
     }
 
     public void btnUpdateOnAcion(ActionEvent actionEvent) {
@@ -69,6 +81,9 @@ public class DashboardRoomFormController {
                 Integer.valueOf(txtFldQtySearch.getText()),
                 txtFldRoomTypeIdSearch.getText()
         ));
+
+        new Alert(Alert.AlertType.CONFIRMATION,"Room Updated Successfully").show();
+        clearSearch();
     }
 
     public void btnDeleteOnAcion(ActionEvent actionEvent) {
@@ -78,6 +93,8 @@ public class DashboardRoomFormController {
                 Integer.valueOf(txtFldQtySearch.getText()),
                 txtFldRoomTypeIdSearch.getText()
         ));
+        new Alert(Alert.AlertType.CONFIRMATION,"Room Deleted Successfully").show();
+        clearSearch();
     }
 
     public void btnViewAllOnAcion(ActionEvent actionEvent) {

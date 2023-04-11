@@ -12,13 +12,13 @@ import java.io.IOException;
 public class DashboardFormController {
     public AnchorPane primaryPane;
     public AnchorPane secondaryPane;
-    public Text txtReservation;
 
     public void initialize(){
 
     }
 
-    public void btnReservationOnAction(ActionEvent actionEvent) {
+    public void btnReservationOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.RESERVATIONFORM, secondaryPane);
     }
 
     public void btnStudentOnAction(ActionEvent actionEvent) throws IOException {

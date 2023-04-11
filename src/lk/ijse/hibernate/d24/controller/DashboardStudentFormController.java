@@ -97,6 +97,8 @@ public class DashboardStudentFormController {
                 txtFldTelSearch.getText()
 
         ));
+
+        new Alert(Alert.AlertType.CONFIRMATION,"Student Deleted Successfully").show();
         clearSearch();
     }
 
