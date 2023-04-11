@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class RoomBOImpl implements RoomBO {
 
-    RoomRepositoryImpl roomRepository = (RoomRepositoryImpl) RepositoryFactory.getRepositoryFactory().getRepository(RepositoryFactory.RepositoryTypes.ROOM);
+    RoomRepository roomRepository = (RoomRepositoryImpl) RepositoryFactory.getRepositoryFactory().getRepository(RepositoryFactory.RepositoryTypes.ROOM);
     @Override
     public boolean saveRoom(RoomDTO roomDTO) {
         return roomRepository.save(new RoomEntity(

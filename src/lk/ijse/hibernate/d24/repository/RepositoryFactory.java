@@ -1,5 +1,6 @@
 package lk.ijse.hibernate.d24.repository;
 
+import lk.ijse.hibernate.d24.repository.custom.impl.ReservationRepositoryImpl;
 import lk.ijse.hibernate.d24.repository.custom.impl.RoomRepositoryImpl;
 import lk.ijse.hibernate.d24.repository.custom.impl.StudentRepositoryImpl;
 
@@ -14,7 +15,7 @@ public class RepositoryFactory {
     }
 
     public enum RepositoryTypes{
-        STUDENT, ROOM
+        STUDENT, ROOM, RESERVATION
     }
 
     public SuperRepository getRepository(RepositoryTypes types){
@@ -24,6 +25,9 @@ public class RepositoryFactory {
 
             case ROOM:
                 return new RoomRepositoryImpl();
+
+            case RESERVATION:
+                return new ReservationRepositoryImpl();
 
             default:
                 return null;

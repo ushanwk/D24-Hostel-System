@@ -26,5 +26,4 @@ public class ReservationEntity {
     @ManyToOne
     RoomEntity room;
     String status;
-    boolean keyMoney;
 }

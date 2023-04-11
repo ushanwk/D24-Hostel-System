@@ -4,13 +4,14 @@ import lk.ijse.hibernate.d24.bo.custom.StudentBO;
 import lk.ijse.hibernate.d24.dto.StudentDTO;
 import lk.ijse.hibernate.d24.entity.StudentEntity;
 import lk.ijse.hibernate.d24.repository.RepositoryFactory;
+import lk.ijse.hibernate.d24.repository.custom.StudentRepository;
 import lk.ijse.hibernate.d24.repository.custom.impl.StudentRepositoryImpl;
 
 import java.util.ArrayList;
 
 public class StudentBOImpl implements StudentBO {
 
-    StudentRepositoryImpl studentRepository = (StudentRepositoryImpl) RepositoryFactory.getRepositoryFactory().getRepository(RepositoryFactory.RepositoryTypes.STUDENT);
+    StudentRepository studentRepository = (StudentRepositoryImpl) RepositoryFactory.getRepositoryFactory().getRepository(RepositoryFactory.RepositoryTypes.STUDENT);
     @Override
     public boolean saveStudent(StudentDTO studentDTO) {
         return studentRepository.save(new StudentEntity(
