@@ -19,10 +19,10 @@ public class ReservationEntity {
     @Column(length = 20)
     String resId;
     Date date;
-    @JoinColumn(name = "studentId", referencedColumnName = "studentId")
+    @JoinColumn(name = "studentId", referencedColumnName = "studentId", nullable = false)
     @ManyToOne
     StudentEntity student;
-    @JoinColumn(name = "roomTypeId", referencedColumnName = "roomTypeId")
+    @JoinColumn(name = "roomTypeId", referencedColumnName = "roomTypeId", nullable = false)
     @ManyToOne
     RoomEntity room;
     String status;

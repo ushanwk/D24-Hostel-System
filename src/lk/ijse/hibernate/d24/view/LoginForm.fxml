@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -40,5 +41,20 @@
          </font>
       </JFXButton>
       <JFXButton layoutX="22.0" layoutY="15.0" onAction="#btnCloseOnAction" prefHeight="12.0" prefWidth="15.0" style="-fx-background-color: #FF0000;" text="X" textFill="WHITE" />
+      <JFXPasswordField fx:id="txtPassFldPassword" focusColor="#159895" labelFloat="true" layoutX="361.0" layoutY="630.0" prefHeight="53.0" prefWidth="391.0" promptText="Password" stylesheets="@css/Login.css" unFocusColor="#159895">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fx:id="imgOpenEye" fitHeight="30.0" fitWidth="30.0" layoutX="777.0" layoutY="654.0" onMouseClicked="#openEyeOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/OpenEye.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCloseEye" fitHeight="30.0" fitWidth="30.0" layoutX="777.0" layoutY="654.0" onMouseClicked="#closeEyeOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/CloseEye.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
