@@ -6,6 +6,7 @@ import lk.ijse.hibernate.d24.repository.custom.RoomRepository;
 import lk.ijse.hibernate.d24.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -65,5 +66,20 @@ public class RoomRepositoryImpl implements RoomRepository {
     @Override
     public List<RoomEntity> getAll() {
         return null;
+    }
+
+    @Override
+    public int decreaseRoomCount(String id) {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("select qty from RoomEntity where roomTypeId like: ID").setParameter("ID", id);
+
+        int qty = (int)(query.list().get(0)) - 1;
+
+        transaction.commit();
+        session.close();
+
+        return qty;
     }
 }

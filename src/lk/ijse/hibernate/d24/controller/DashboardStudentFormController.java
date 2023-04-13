@@ -1,9 +1,11 @@
 package lk.ijse.hibernate.d24.controller;
 
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import lk.ijse.hibernate.d24.bo.BOFactory;
 import lk.ijse.hibernate.d24.bo.custom.StudentBO;
 import lk.ijse.hibernate.d24.dto.StudentDTO;
@@ -15,20 +17,23 @@ public class DashboardStudentFormController {
     public JFXTextField txtFldNameReg;
     public JFXTextField txtFldAddressReg;
     public JFXTextField txtFldDobReg;
-    public JFXTextField txtFldGenderReg;
     public JFXTextField txtFldTelReg;
     public JFXTextField txtFldNameSearch;
     public JFXTextField txtFldAddressSearch;
     public JFXTextField txtFldSDobSearch;
-    public JFXTextField txtFldGenderSearch;
     public TextField txtFldStdentIdSearch;
     public JFXTextField txtFldTelSearch;
+    public JFXComboBox cmbGender;
+    public JFXComboBox cmbGenderSearch;
 
 
     StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.STUDENT);
 
     public void initialize(){
         clearSearch();clearReg();
+        cmbGender.getItems().add("Male");
+        cmbGender.getItems().add("Female");
+
     }
 
     public void btnRegisterOnAction(ActionEvent actionEvent) {
@@ -36,12 +41,11 @@ public class DashboardStudentFormController {
                 txtFldStudentIdReg.getText(),
                 txtFldNameReg.getText(),
                 txtFldAddressReg.getText(),
-                txtFldGenderReg.getText(),
+                String.valueOf(cmbGender.getValue()),
                 Date.valueOf(txtFldDobReg.getText()),
                 txtFldTelReg.getText()
 
         ));
-
 
         new Alert(Alert.AlertType.CONFIRMATION,"Student Registered Successfully").show();
 
@@ -58,7 +62,6 @@ public class DashboardStudentFormController {
         txtFldNameReg.clear();
         txtFldAddressReg.clear();
         txtFldDobReg.clear();
-        txtFldGenderReg.clear();
         txtFldTelReg.clear();
     }
 
@@ -67,7 +70,6 @@ public class DashboardStudentFormController {
         txtFldNameSearch.clear();
         txtFldAddressSearch.clear();
         txtFldSDobSearch.clear();
-        txtFldGenderSearch.clear();
         txtFldTelSearch.clear();
     }
 
@@ -77,7 +79,7 @@ public class DashboardStudentFormController {
                 txtFldStdentIdSearch.getText(),
                 txtFldNameSearch.getText(),
                 txtFldAddressSearch.getText(),
-                txtFldGenderSearch.getText(),
+                String.valueOf(cmbGenderSearch.getValue()),
                 Date.valueOf(txtFldSDobSearch.getText()),
                 txtFldTelSearch.getText()
         ));
@@ -92,7 +94,7 @@ public class DashboardStudentFormController {
                 txtFldStdentIdSearch.getText(),
                 txtFldNameSearch.getText(),
                 txtFldAddressSearch.getText(),
-                txtFldGenderSearch.getText(),
+                String.valueOf(cmbGenderSearch.getValue()),
                 Date.valueOf(txtFldSDobSearch.getText()),
                 txtFldTelSearch.getText()
 
@@ -113,9 +115,18 @@ public class DashboardStudentFormController {
             txtFldSDobSearch.setText(String.valueOf(studentDTO.getDob()));
             txtFldTelSearch.setText(studentDTO.getTel());
             txtFldAddressSearch.setText(studentDTO.getAddress());
-            txtFldGenderSearch.setText(studentDTO.getGender());
             txtFldNameSearch.setText(studentDTO.getName());
             txtFldStdentIdSearch.setText(studentDTO.getStudentID());
+
+            cmbGenderSearch.getItems().add("Male");
+            cmbGenderSearch.getItems().add("Female");
+
+            if(studentDTO.getGender() .equals("Male")){
+                cmbGenderSearch.setValue("Male");
+            }else{
+                cmbGenderSearch.setValue("Female");
+            }
+
 
         }catch (Exception e){
             new Alert(Alert.AlertType.WARNING,"Student ID not Found").show();
@@ -123,5 +134,4 @@ public class DashboardStudentFormController {
         }
 
     }
-
 }

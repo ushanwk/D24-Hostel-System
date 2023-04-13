@@ -4,4 +4,5 @@ import lk.ijse.hibernate.d24.entity.RoomEntity;
 import lk.ijse.hibernate.d24.repository.CrudRepository;
 
 public interface RoomRepository extends CrudRepository<RoomEntity> {
+    public int decreaseRoomCount(String id);
 }

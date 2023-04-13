@@ -8,4 +8,5 @@ public interface RoomBO extends SuperBO {
     public boolean updateRoom(RoomDTO roomDTO);
     public boolean deleteRoom(RoomDTO roomDTO);
     public RoomDTO searchRoom(String id);
+    public int decreaseQtyRoom(String id);
 }

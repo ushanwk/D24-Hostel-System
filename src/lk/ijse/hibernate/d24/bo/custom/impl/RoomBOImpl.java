@@ -56,4 +56,9 @@ public class RoomBOImpl implements RoomBO {
                 room.getType()
         );
     }
+
+    @Override
+    public int decreaseQtyRoom(String id) {
+        return roomRepository.decreaseRoomCount(id);
+    }
 }

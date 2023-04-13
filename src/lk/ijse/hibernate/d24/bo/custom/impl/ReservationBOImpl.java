@@ -2,7 +2,6 @@ package lk.ijse.hibernate.d24.bo.custom.impl;
 
 import lk.ijse.hibernate.d24.bo.custom.ReservationBO;
 import lk.ijse.hibernate.d24.dto.ReservationDTO;
-import lk.ijse.hibernate.d24.dto.RoomDTO;
 import lk.ijse.hibernate.d24.entity.ReservationEntity;
 import lk.ijse.hibernate.d24.entity.RoomEntity;
 import lk.ijse.hibernate.d24.entity.StudentEntity;
@@ -27,6 +26,12 @@ public class ReservationBOImpl implements ReservationBO {
                 room,
                 reservationDTO.getStatus()
         ));
+
+        int qty = roomRepository.decreaseRoomCount(reservationDTO.getRoomTypeID());
+
+        room.setQty(qty);
+
+        roomRepository.update(room);
 
         return true;
     }

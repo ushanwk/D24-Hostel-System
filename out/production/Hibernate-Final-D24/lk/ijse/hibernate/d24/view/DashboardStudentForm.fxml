@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.TextField?>
@@ -46,11 +47,6 @@
                </font>
             </JFXTextField>
             <JFXTextField fx:id="txtFldDobReg" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="101.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtFldGenderReg" focusColor="WHITE" labelFloat="true" layoutX="1.0" layoutY="310.0" prefHeight="40.0" prefWidth="293.0" promptText="Gender" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -120,11 +116,6 @@
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtFldGenderSearch" focusColor="WHITE" labelFloat="true" layoutX="1.0" layoutY="310.0" prefHeight="40.0" prefWidth="293.0" promptText="Gender" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </JFXTextField>
             <TextField fx:id="txtFldStdentIdSearch" layoutX="129.0" layoutY="10.0" onAction="#txtFldSearchIdOnAction" prefHeight="27.0" prefWidth="97.0" />
             <JFXTextField fx:id="txtFldTelSearch" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="207.0" prefHeight="40.0" prefWidth="293.0" promptText="Telephone" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
@@ -148,5 +139,8 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
+      <JFXComboBox fx:id="cmbGender" focusColor="WHITE" labelFloat="true" layoutX="131.0" layoutY="761.0" prefHeight="29.0" prefWidth="191.0" promptText="Gender" stylesheets="@css/StudentComboBox.css" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbGenderSearch" focusColor="WHITE" labelFloat="true" layoutX="912.0" layoutY="760.0" prefHeight="29.0" prefWidth="191.0" promptText="Gender" stylesheets="@css/StudentComboBox.css" unFocusColor="WHITE" />
+
    </children>
 </AnchorPane>
