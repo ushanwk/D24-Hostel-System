@@ -8,6 +8,8 @@ import lk.ijse.hibernate.d24.repository.custom.StudentRepository;
 import lk.ijse.hibernate.d24.repository.custom.impl.StudentRepositoryImpl;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class StudentBOImpl implements StudentBO {
 
@@ -61,4 +63,25 @@ public class StudentBOImpl implements StudentBO {
                 student.getTel()
         );
     }
+
+    @Override
+    public ArrayList<StudentDTO> getAllStudents() {
+        ArrayList<StudentDTO> studentList = new ArrayList<>();
+
+        studentList.addAll(studentRepository.getAll().stream().map(studentEntity -> {
+            return new StudentDTO(
+                    studentEntity.getStudentId(),
+                    studentEntity.getName(),
+                    studentEntity.getAddress(),
+                    studentEntity.getGender(),
+                    studentEntity.getDOB(),
+                    studentEntity.getTel()
+            );
+        }).collect(Collectors.toList()));
+
+        return studentList;
+    }
+
+
+
 }

@@ -8,6 +8,7 @@ import lk.ijse.hibernate.d24.repository.custom.RoomRepository;
 import lk.ijse.hibernate.d24.repository.custom.impl.RoomRepositoryImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RoomBOImpl implements RoomBO {
 
@@ -60,5 +61,25 @@ public class RoomBOImpl implements RoomBO {
     @Override
     public int getRoomCount(String id) {
         return roomRepository.getRoomCount(id);
+    }
+
+    @Override
+    public List<RoomDTO> getAllRooms() {
+        List<RoomEntity> allRoomsEntity = roomRepository.getAll();
+
+        List<RoomDTO> allRooms = null;
+
+        for (int i = 0; i < allRoomsEntity.size(); i++) {
+            allRooms.add(
+                    new RoomDTO(
+                            allRoomsEntity.get(i).getRoomTypeId(),
+                            allRoomsEntity.get(i).getKeyMoney(),
+                            allRoomsEntity.get(i).getQty(),
+                            allRoomsEntity.get(i).getType()
+                    )
+            );
+        }
+
+        return allRooms;
     }
 }

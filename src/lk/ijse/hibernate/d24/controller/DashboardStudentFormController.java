@@ -5,11 +5,15 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import lk.ijse.hibernate.d24.bo.BOFactory;
 import lk.ijse.hibernate.d24.bo.custom.StudentBO;
 import lk.ijse.hibernate.d24.dto.StudentDTO;
+import lk.ijse.hibernate.d24.util.Navigation;
+import lk.ijse.hibernate.d24.util.Routes;
 
+import java.io.IOException;
 import java.sql.Date;
 
 public class DashboardStudentFormController {
@@ -25,6 +29,7 @@ public class DashboardStudentFormController {
     public JFXTextField txtFldTelSearch;
     public JFXComboBox cmbGender;
     public JFXComboBox cmbGenderSearch;
+    public AnchorPane secondaryPane;
 
 
     StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.STUDENT);
@@ -104,7 +109,8 @@ public class DashboardStudentFormController {
         clearSearch();
     }
 
-    public void btnViewAllOnAcion(ActionEvent actionEvent) {
+    public void btnViewAllOnAcion(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.VIEWALLSTUDENTS, secondaryPane);
     }
 
     public void txtFldSearchIdOnAction(ActionEvent actionEvent) {

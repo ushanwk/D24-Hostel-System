@@ -64,6 +64,14 @@ public class ReservationRepositoryImpl implements ReservationRepository {
 
     @Override
     public List<ReservationEntity> getAll() {
-        return null;
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<ReservationEntity> allReservations = session.createQuery("from ReservationEntity").list();
+
+        transaction.commit();
+        session.close();
+
+        return allReservations;
     }
 }

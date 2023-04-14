@@ -65,7 +65,15 @@ public class RoomRepositoryImpl implements RoomRepository {
 
     @Override
     public List<RoomEntity> getAll() {
-        return null;
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<RoomEntity> allRooms = session.createQuery("from RoomEntity").list();
+
+        transaction.commit();
+        session.close();
+
+        return allRooms;
     }
 
     @Override

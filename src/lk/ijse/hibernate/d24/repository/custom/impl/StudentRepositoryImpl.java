@@ -64,6 +64,14 @@ public class StudentRepositoryImpl implements StudentRepository {
 
     @Override
     public List<StudentEntity> getAll() {
-        return null;
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<StudentEntity> allStudents = session.createQuery("from StudentEntity").list();
+
+        transaction.commit();
+        session.close();
+
+        return allStudents;
     }
 }
