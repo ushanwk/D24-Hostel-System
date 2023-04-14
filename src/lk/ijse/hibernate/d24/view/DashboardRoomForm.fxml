@@ -105,7 +105,7 @@
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtFldSKeyMoneySearch" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="107.0" prefHeight="40.0" prefWidth="293.0" promptText="Key Money" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldSKeyMoneySearch" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="101.0" prefHeight="40.0" prefWidth="293.0" promptText="Key Money" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>

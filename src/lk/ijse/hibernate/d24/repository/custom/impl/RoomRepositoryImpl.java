@@ -69,13 +69,13 @@ public class RoomRepositoryImpl implements RoomRepository {
     }
 
     @Override
-    public int decreaseRoomCount(String id) {
+    public int getRoomCount(String id) {
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
         Query query = session.createQuery("select qty from RoomEntity where roomTypeId like: ID").setParameter("ID", id);
 
-        int qty = (int)(query.list().get(0)) - 1;
+        int qty = (int)(query.list().get(0));
 
         transaction.commit();
         session.close();

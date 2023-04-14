@@ -2,6 +2,7 @@ package lk.ijse.hibernate.d24.controller;
 
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import lk.ijse.hibernate.d24.bo.BOFactory;
 import lk.ijse.hibernate.d24.bo.custom.ReservationBO;
@@ -33,6 +34,8 @@ public class DashboardReservationFormController {
                 txtFldRoomTypeIdReg.getText(),
                 txtFldStatusReg.getText()
         ));
+        new Alert(Alert.AlertType.CONFIRMATION,"Reservation Placed Successfully").show();
+        clearReg();
     }
 
     private void clearReg(){
@@ -57,33 +60,45 @@ public class DashboardReservationFormController {
     }
 
     public void txtFldReservationIdOnAction(ActionEvent actionEvent) {
-        ReservationDTO reservationDTO = reservationBO.searchReservation(txtFldReservationIdSearch.getText());
 
-        txtFldReservationIdSearch.setText(reservationDTO.getResID());
-        txtFldDateSearch.setText(String.valueOf(reservationDTO.getDate()));
-        txtFldStudentIdSearch.setText(reservationDTO.getStudentID());
-        txtFldRoomTypeIdSearch.setText(reservationDTO.getRoomTypeID());
-        txtFldStatusSearch.setText(reservationDTO.getStatus());
+        try {
+            ReservationDTO reservationDTO = reservationBO.searchReservation(txtFldReservationIdSearch.getText());
+
+            txtFldReservationIdSearch.setText(reservationDTO.getResID());
+            txtFldDateSearch.setText(String.valueOf(reservationDTO.getDate()));
+            txtFldStudentIdSearch.setText(reservationDTO.getStudentID());
+            txtFldRoomTypeIdSearch.setText(reservationDTO.getRoomTypeID());
+            txtFldStatusSearch.setText(reservationDTO.getStatus());
+        }catch (Exception e){
+            new Alert(Alert.AlertType.WARNING,"Reservation not Found").show();
+            clearSearch();
+        }
     }
 
     public void btnUpdateOnAcion(ActionEvent actionEvent) {
         reservationBO.updateReservation(new ReservationDTO(
-                txtReservationIdReg.getText(),
-                Date.valueOf(txtFldDateReg.getText()),
-                txtFldStudentIdReg.getText(),
-                txtFldRoomTypeIdReg.getText(),
-                txtFldStatusReg.getText()
+                txtFldReservationIdSearch.getText(),
+                Date.valueOf(txtFldDateSearch.getText()),
+                txtFldStudentIdSearch.getText(),
+                txtFldRoomTypeIdSearch.getText(),
+                txtFldStatusSearch.getText()
         ));
+
+        new Alert(Alert.AlertType.CONFIRMATION,"Reservation Updated Successfully").show();
+        clearSearch();
     }
 
     public void btnDeleteOnAcion(ActionEvent actionEvent) {
         reservationBO.deleteReservation(new ReservationDTO(
-                txtReservationIdReg.getText(),
-                Date.valueOf(txtFldDateReg.getText()),
-                txtFldStudentIdReg.getText(),
-                txtFldRoomTypeIdReg.getText(),
-                txtFldStatusReg.getText()
+                txtFldReservationIdSearch.getText(),
+                Date.valueOf(txtFldDateSearch.getText()),
+                txtFldStudentIdSearch.getText(),
+                txtFldRoomTypeIdSearch.getText(),
+                txtFldStatusSearch.getText()
         ));
+
+        new Alert(Alert.AlertType.CONFIRMATION,"Reservation Deleted Successfully").show();
+        clearSearch();
     }
 
     public void btnViewAllOnAcion(ActionEvent actionEvent) {

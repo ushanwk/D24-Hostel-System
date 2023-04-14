@@ -25,7 +25,7 @@ public class LoginFormController {
     }
 
     public void btnSignInOnActiom(ActionEvent actionEvent) throws IOException {
-        if(txtFldUsername.getText() .equals("user") && txtFldPassword.getText() .equals("1234") || txtPassFldPassword .equals("1234")){
+        if(txtFldUsername.getText() .equals("user") && txtPassFldPassword.getText() .equals("1234") || txtFldPassword.getText() .equals("1234")){
             Navigation.navigate(Routes.DASHBOARDFORM, primaryPane);
         }else{
             System.out.println("Not Done");

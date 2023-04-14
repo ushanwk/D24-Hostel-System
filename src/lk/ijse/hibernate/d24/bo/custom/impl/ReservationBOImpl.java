@@ -27,9 +27,9 @@ public class ReservationBOImpl implements ReservationBO {
                 reservationDTO.getStatus()
         ));
 
-        int qty = roomRepository.decreaseRoomCount(reservationDTO.getRoomTypeID());
+        int qty = roomRepository.getRoomCount(reservationDTO.getRoomTypeID());
 
-        room.setQty(qty);
+        room.setQty(qty-1);
 
         roomRepository.update(room);
 
@@ -64,6 +64,12 @@ public class ReservationBOImpl implements ReservationBO {
                 room,
                 reservationDTO.getStatus()
         ));
+
+        int qty = roomRepository.getRoomCount(reservationDTO.getRoomTypeID());
+
+        room.setQty(qty+1);
+
+        roomRepository.update(room);
 
         return true;
     }
