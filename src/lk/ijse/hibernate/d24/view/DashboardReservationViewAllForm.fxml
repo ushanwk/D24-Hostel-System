@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="secondaryPane" prefHeight="904.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.d24.controller.DashboardReservationViewAllFormController">
+   <children>
+      <ImageView fitHeight="904.0" fitWidth="1700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assest/DashboardSecondaryBackground.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="73.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableView" layoutX="96.0" layoutY="158.0" prefHeight="656.0" prefWidth="1490.0" stylesheets="@css/Table.css">
+         <columns>
+            <TableColumn fx:id="colReservationId" prefWidth="285.63529205322266" text="Reservation ID" />
+            <TableColumn fx:id="colDate" prefWidth="313.1321105957031" text="Date" />
+            <TableColumn fx:id="colStudentId" prefWidth="325.7073974609375" text="Student ID" />
+            <TableColumn fx:id="colRoomTypeId" prefWidth="315.29266357421875" text="Room Type ID" />
+            <TableColumn fx:id="colStatus" prefWidth="248.9005126953125" text="Status" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

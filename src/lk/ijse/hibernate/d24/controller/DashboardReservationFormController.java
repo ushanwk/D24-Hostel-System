@@ -4,12 +4,16 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import lk.ijse.hibernate.d24.bo.BOFactory;
 import lk.ijse.hibernate.d24.bo.custom.ReservationBO;
 import lk.ijse.hibernate.d24.dto.ReservationDTO;
 import lk.ijse.hibernate.d24.repository.custom.RoomRepository;
 import lk.ijse.hibernate.d24.repository.custom.impl.RoomRepositoryImpl;
+import lk.ijse.hibernate.d24.util.Navigation;
+import lk.ijse.hibernate.d24.util.Routes;
 
+import java.io.IOException;
 import java.sql.Date;
 
 public class DashboardReservationFormController {
@@ -23,6 +27,7 @@ public class DashboardReservationFormController {
     public JFXTextField txtFldRoomTypeIdSearch;
     public TextField txtFldReservationIdSearch;
     public JFXTextField txtFldDateSearch;
+    public AnchorPane secondaryPane;
 
     ReservationBO reservationBO = (ReservationBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.RESERVATION);
 
@@ -101,7 +106,7 @@ public class DashboardReservationFormController {
         clearSearch();
     }
 
-    public void btnViewAllOnAcion(ActionEvent actionEvent) {
-
+    public void btnViewAllOnAcion(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.VIEWALLRESERVATIONS, secondaryPane);
     }
 }

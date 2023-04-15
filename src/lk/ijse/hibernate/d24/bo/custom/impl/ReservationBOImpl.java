@@ -10,6 +10,9 @@ import lk.ijse.hibernate.d24.repository.custom.ReservationRepository;
 import lk.ijse.hibernate.d24.repository.custom.RoomRepository;
 import lk.ijse.hibernate.d24.repository.custom.StudentRepository;
 
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
 public class ReservationBOImpl implements ReservationBO {
     StudentRepository studentRepository = (StudentRepository) RepositoryFactory.getRepositoryFactory().getRepository(RepositoryFactory.RepositoryTypes.STUDENT);
     RoomRepository roomRepository = (RoomRepository) RepositoryFactory.getRepositoryFactory().getRepository(RepositoryFactory.RepositoryTypes.ROOM);
@@ -85,5 +88,22 @@ public class ReservationBOImpl implements ReservationBO {
                 reservationEntity.getRoom().getRoomTypeId(),
                 reservationEntity.getStatus()
         );
+    }
+
+    @Override
+    public ArrayList<ReservationDTO> getAllReservations() {
+        ArrayList<ReservationDTO> allRes = new ArrayList<>();
+
+        allRes.addAll(reservationRepository.getAll().stream().map(reservationEntity -> {
+            return new ReservationDTO(
+                    reservationEntity.getResId(),
+                    reservationEntity.getDate(),
+                    reservationEntity.getStudent().getStudentId(),
+                    reservationEntity.getRoom().getRoomTypeId(),
+                    reservationEntity.getStatus()
+            );
+        }).collect(Collectors.toList()));
+
+        return allRes;
     }
 }
