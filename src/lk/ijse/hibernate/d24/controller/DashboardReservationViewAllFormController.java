@@ -24,10 +24,10 @@ public class DashboardReservationViewAllFormController {
     ReservationBO reservationBO = (ReservationBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.RESERVATION);
 
     public void initialize(){
-        colReservationId.setCellValueFactory(new PropertyValueFactory<>("ResId"));
+        colReservationId.setCellValueFactory(new PropertyValueFactory<>("resID"));
         colDate.setCellValueFactory(new PropertyValueFactory<>("Date"));
-        colStudentId.setCellValueFactory(new PropertyValueFactory<>("StudentId"));
-        colRoomTypeId.setCellValueFactory(new PropertyValueFactory<>("RoomTypeId"));
+        colStudentId.setCellValueFactory(new PropertyValueFactory<>("StudentID"));
+        colRoomTypeId.setCellValueFactory(new PropertyValueFactory<>("roomTypeID"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("Status"));
 
         try{

@@ -23,7 +23,7 @@ public class DashboardRoomViewAllFormController {
     RoomBO roomBO = (RoomBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ROOM);
 
     public void initialize(){
-        colRoomTypeId.setCellValueFactory(new PropertyValueFactory<>("RoomTypeId"));
+        colRoomTypeId.setCellValueFactory(new PropertyValueFactory<>("roomTypeID"));
         colKeyMoney.setCellValueFactory(new PropertyValueFactory<>("KeyMoney"));
         colQty.setCellValueFactory(new PropertyValueFactory<>("Qty"));
         colType.setCellValueFactory(new PropertyValueFactory<>("Type"));
