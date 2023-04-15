@@ -4,9 +4,14 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import lk.ijse.hibernate.d24.bo.BOFactory;
 import lk.ijse.hibernate.d24.bo.custom.RoomBO;
 import lk.ijse.hibernate.d24.dto.RoomDTO;
+import lk.ijse.hibernate.d24.util.Navigation;
+import lk.ijse.hibernate.d24.util.Routes;
+
+import java.io.IOException;
 
 public class DashboardRoomFormController {
     public JFXTextField txtFldRoomTypeIdReg;
@@ -17,6 +22,7 @@ public class DashboardRoomFormController {
     public JFXTextField txtFldQtySearch;
     public JFXTextField txtFldSKeyMoneySearch;
     public TextField txtFldRoomTypeIdSearch;
+    public AnchorPane secondaryPane;
 
     public void initialize(){
         clearReg();
@@ -97,6 +103,7 @@ public class DashboardRoomFormController {
         clearSearch();
     }
 
-    public void btnViewAllOnAcion(ActionEvent actionEvent) {
+    public void btnViewAllOnAcion(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.VIEWALLROOMS, secondaryPane);
     }
 }

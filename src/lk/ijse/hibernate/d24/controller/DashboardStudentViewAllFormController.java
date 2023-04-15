@@ -27,7 +27,7 @@ public class DashboardStudentViewAllFormController {
     StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.STUDENT);
 
     public void initialize(){
-        colStudentId.setCellValueFactory(new PropertyValueFactory<>("Id"));
+        colStudentId.setCellValueFactory(new PropertyValueFactory<>("StudentId"));
         colName.setCellValueFactory(new PropertyValueFactory<>("Name"));
         colAddress.setCellValueFactory(new PropertyValueFactory<>("Address"));
         colGender.setCellValueFactory(new PropertyValueFactory<>("Gender"));
