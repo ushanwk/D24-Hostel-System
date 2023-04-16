@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import lk.ijse.hibernate.d24.bo.BOFactory;
 import lk.ijse.hibernate.d24.bo.custom.RoomBO;
 import lk.ijse.hibernate.d24.dto.RoomDTO;
@@ -23,10 +24,39 @@ public class DashboardRoomFormController {
     public JFXTextField txtFldSKeyMoneySearch;
     public TextField txtFldRoomTypeIdSearch;
     public AnchorPane secondaryPane;
+    public Text txtNonAcRooms;
+    public Text txtNonAcFoodRooms;
+    public Text txtAcRooms;
+    public Text txtAcFoodRooms;
 
     public void initialize(){
         clearReg();
         clearSearch();
+
+        try {
+            txtAcRooms.setText(String.valueOf(roomBO.getRoomCount("RM-7896")));
+        }catch (Exception e){
+            txtAcRooms.setText("0");
+        }
+
+        try {
+            txtAcFoodRooms.setText(String.valueOf(roomBO.getRoomCount("RM-0093")));
+        }catch (Exception e){
+            txtAcFoodRooms.setText("0");
+        }
+
+        try {
+            txtNonAcRooms.setText(String.valueOf(roomBO.getRoomCount("RM-1324")));
+        }catch (Exception e){
+            txtNonAcRooms.setText("0");
+        }
+
+        try {
+            txtNonAcFoodRooms.setText(String.valueOf(roomBO.getRoomCount("RM-5467")));
+        }catch (Exception e){
+            txtNonAcFoodRooms.setText("0");
+        }
+
     }
 
     private void clearReg(){

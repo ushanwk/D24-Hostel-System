@@ -19,27 +19,72 @@
                   <Image url="@assest/DashboardMainFormSketch.jpg" />
                </image>
             </ImageView>
-            <JFXButton layoutX="723.0" layoutY="726.0" onAction="#btnStudentRegOnAction" stylesheets="@css/DashboardMain.css" text="Student Registration" textFill="WHITE">
+            <JFXButton layoutX="731.0" layoutY="726.0" onAction="#btnStudentRegOnAction" prefHeight="15.0" prefWidth="229.0" stylesheets="@css/DashboardMain.css" text="Student Registration" textFill="WHITE">
                <font>
                   <Font name="Helvetica Bold" size="20.0" />
                </font>
             </JFXButton>
          </children>
       </AnchorPane>
-      <JFXButton layoutX="1078.0" layoutY="30.0" onAction="#btnReservationOnAction" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Reservation">
+      <JFXButton layoutX="978.0" layoutY="24.0" onAction="#btnReservationOnAction" prefHeight="47.0" prefWidth="193.0" stylesheets="@css/DashboardTabs.css" text="Reservation">
          <font>
-            <Font name="Helvetica Bold" size="20.0" />
+            <Font name="Helvetica Bold" size="15.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/ReservationLogo.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
-      <JFXButton layoutX="1232.0" layoutY="31.0" onAction="#btnStudentOnAction" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Students">
+      <JFXButton layoutX="1154.0" layoutY="21.0" onAction="#btnStudentOnAction" prefHeight="54.0" prefWidth="186.0" stylesheets="@css/DashboardTabs.css" text="Student">
          <font>
-            <Font name="Helvetica Bold" size="20.0" />
+            <Font name="Helvetica Bold" size="15.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/StudentLogo.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
-      <JFXButton layoutX="1356.0" layoutY="31.0" onAction="#btnRoomOnAction" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Room">
+      <JFXButton layoutX="1327.0" layoutY="28.0" onAction="#btnRoomOnAction" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="Room">
          <font>
-            <Font name="Helvetica Bold" size="20.0" />
+            <Font name="Helvetica Bold" size="15.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/RoomLogo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="815.0" layoutY="25.0" onAction="#btnUserOnAction" prefHeight="47.0" prefWidth="193.0" stylesheets="@css/DashboardTabs.css" text="User">
+         <font>
+            <Font name="Helvetica Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/UserLogo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="1475.0" layoutY="28.0" onAction="#btnLogOutOnAction" prefHeight="41.0" prefWidth="150.0" stylesheets="@css/DashboardTabs.css" text="LogOut">
+         <font>
+            <Font name="Helvetica Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assest/LogOutLogo.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
    </children>
 </AnchorPane>

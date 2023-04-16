@@ -49,7 +49,6 @@ public class DashboardStudentFormController {
                 String.valueOf(cmbGender.getValue()),
                 Date.valueOf(txtFldDobReg.getText()),
                 txtFldTelReg.getText()
-
         ));
 
         new Alert(Alert.AlertType.CONFIRMATION,"Student Registered Successfully").show();
@@ -68,6 +67,7 @@ public class DashboardStudentFormController {
         txtFldAddressReg.clear();
         txtFldDobReg.clear();
         txtFldTelReg.clear();
+        cmbGender.setValue("");
     }
 
     private void clearSearch(){
@@ -76,6 +76,7 @@ public class DashboardStudentFormController {
         txtFldAddressSearch.clear();
         txtFldSDobSearch.clear();
         txtFldTelSearch.clear();
+        cmbGenderSearch.setValue("");
     }
 
 

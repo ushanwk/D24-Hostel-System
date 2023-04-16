@@ -32,4 +32,11 @@ public class DashboardFormController {
     public void btnStudentRegOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.navigate(Routes.STUDENTFORM, secondaryPane);
     }
+
+    public void btnUserOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnLogOutOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.LOGIN, primaryPane);
+    }
 }

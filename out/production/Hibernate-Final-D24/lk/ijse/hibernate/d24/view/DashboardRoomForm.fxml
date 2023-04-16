@@ -128,5 +128,45 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
+      <Text fill="#159895" layoutX="350.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Non AC Rooms">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="607.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Non AC / Food Rooms" textAlignment="CENTER" wrappingWidth="200.00000074505806">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="957.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AC Rooms">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="1221.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AC / Food Rooms">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNonAcRooms" fill="#159895" layoutX="396.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+         <font>
+            <Font name="Helvetica Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNonAcFoodRooms" fill="#159895" layoutX="688.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+         <font>
+            <Font name="Helvetica Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtAcRooms" fill="#159895" layoutX="982.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+         <font>
+            <Font name="Helvetica Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtAcFoodRooms" fill="#159895" layoutX="1275.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+         <font>
+            <Font name="Helvetica Bold" size="30.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
