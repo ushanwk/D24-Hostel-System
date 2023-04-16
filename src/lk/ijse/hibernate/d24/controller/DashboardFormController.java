@@ -33,7 +33,8 @@ public class DashboardFormController {
         Navigation.navigate(Routes.STUDENTFORM, secondaryPane);
     }
 
-    public void btnUserOnAction(ActionEvent actionEvent) {
+    public void btnUserOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.USER, secondaryPane);
     }
 
     public void btnLogOutOnAction(ActionEvent actionEvent) throws IOException {

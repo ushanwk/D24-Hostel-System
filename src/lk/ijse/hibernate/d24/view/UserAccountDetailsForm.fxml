@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="428.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.d24.controller.UserAccountDetailsFormController">
+   <children>
+      <Text fill="#159895" layoutX="96.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="96.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="96.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="96.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIC :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="97.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="163.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ushan Kaushalya">
+         <font>
+            <Font name="Helvetica Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="145.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200219302022">
+         <font>
+            <Font name="Helvetica Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="183.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matara">
+         <font>
+            <Font name="Helvetica Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="197.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UkWk">
+         <font>
+            <Font name="Helvetica Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="193.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1234">
+         <font>
+            <Font name="Helvetica Bold" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
