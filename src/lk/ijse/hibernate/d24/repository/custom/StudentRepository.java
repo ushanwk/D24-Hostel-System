@@ -6,4 +6,5 @@ import lk.ijse.hibernate.d24.repository.CrudRepository;
 import lk.ijse.hibernate.d24.repository.SuperRepository;
 
 public interface StudentRepository extends CrudRepository<StudentEntity> {
+    public String findNextStudentID();
 }

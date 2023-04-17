@@ -38,6 +38,8 @@ public class DashboardStudentFormController {
         clearSearch();clearReg();
         cmbGender.getItems().add("Male");
         cmbGender.getItems().add("Female");
+        
+        txtFldStudentIdReg.setText(studentBO.nextStudentId());
 
     }
 

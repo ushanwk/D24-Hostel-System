@@ -82,6 +82,10 @@ public class StudentBOImpl implements StudentBO {
         return studentList;
     }
 
+    @Override
+    public String nextStudentId() {
+        return studentRepository.findNextStudentID();
+    }
 
 
 }
