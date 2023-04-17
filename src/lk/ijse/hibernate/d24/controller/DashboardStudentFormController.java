@@ -38,9 +38,8 @@ public class DashboardStudentFormController {
         clearSearch();clearReg();
         cmbGender.getItems().add("Male");
         cmbGender.getItems().add("Female");
-        
-        txtFldStudentIdReg.setText(studentBO.nextStudentId());
 
+        txtFldStudentIdReg.setText(studentBO.nextStudentId());
     }
 
     public void btnRegisterOnAction(ActionEvent actionEvent) {
@@ -55,7 +54,7 @@ public class DashboardStudentFormController {
 
         new Alert(Alert.AlertType.CONFIRMATION,"Student Registered Successfully").show();
 
-        clearReg();
+        initialize();
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {

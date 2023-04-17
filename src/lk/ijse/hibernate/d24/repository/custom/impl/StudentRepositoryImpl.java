@@ -84,22 +84,27 @@ public class StudentRepositoryImpl implements StudentRepository {
 
         Query query = session.createQuery("select studentId from StudentEntity order by studentId desc");
 
-        String id = (String)query.list().get(0);
+        String nextId = "S001";
 
-        String[] SUs = id.split("S00");
+        if(query.list().size() == 0){
+            return nextId;
+        }else{
+            String id = (String)query.list().get(0);
 
-        for (String a:SUs) {
-            id = a;
+            String[] SUs = id.split("S00");
+
+            for (String a:SUs) {
+                id = a;
+            }
+
+            int idNum = Integer.valueOf(id);
+
+            id = "S00" + (idNum+1);
+
+            transaction.commit();
+            session.close();
+
+            return id;
         }
-
-        int idNum = Integer.valueOf(id);
-
-        id = "S00" + (idNum+1);
-
-        transaction.commit();
-        session.close();
-
-        return id;
-
     }
 }
