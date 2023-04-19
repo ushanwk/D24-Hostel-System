@@ -1,16 +1,16 @@
 # D24-Hostel
 Hibernate small project
+# D24-Hostel
 
-<img src="https://github.com/UshanKaushalya/Hostal-Management/blob/master/Hostal-Managements/Hostal-Management/src/lk/ijse/hostal_management/assets/readme-image/image-1.png" alt="drawing" width="90%" height="75%" align="center">
+Hibernate small project
 
-<img src="https://github.com/UshanKaushalya/Hostal-Management/blob/master/Hostal-Managements/Hostal-Management/src/lk/ijse/hostal_management/assets/readme-image/image-2.png" alt="drawing" width="90%" height="75%" align="center">
+<img src="https://github.com/UshanKaushalya/D24-Hostel/ScreenShots/Screenshot 2023-04-19 at 20.07.08.png" alt="drawing" width="90%" height="75%" align="center">
 
-<img src="https://github.com/UshanKaushalya/Hostal-Management/blob/master/Hostal-Managements/Hostal-Management/src/lk/ijse/hostal_management/assets/readme-image/image-3.png" alt="drawing" width="90%" height="75%" align="center">
+<img src="https://github.com/UshanKaushalya/D24-Hostel/ScreenShots/Screenshot 2023-04-19 at 20.07.44.png" alt="drawing" width="90%" height="75%" align="center">
 
-<img src="https://github.com/UshanKaushalya/Hostal-Management/blob/master/Hostal-Managements/Hostal-Management/src/lk/ijse/hostal_management/assets/readme-image/image-4.png" alt="drawing" width="90%" height="75%" align="center">
+<img src="https://github.com/UshanKaushalya/D24-Hostel/ScreenShots/Screenshot 2023-04-19 at 20.07.55.png" alt="drawing" width="90%" height="75%" align="center">
 
-<img src="https://github.com/UshanKaushalya/Hostal-Management/blob/master/Hostal-Managements/Hostal-Management/src/lk/ijse/hostal_management/assets/readme-image/image-5.png" alt="drawing" width="90%" height="75%" align="center">
+<img src="https://github.com/UshanKaushalya/D24-Hostel/ScreenShots/Screenshot 2023-04-19 at 20.08.02.png" alt="drawing" width="90%" height="75%" align="center">
 
-<img src="https://github.com/UshanKaushalya/Hostal-Management/blob/master/Hostal-Managements/Hostal-Management/src/lk/ijse/hostal_management/assets/readme-image/image-6.png" alt="drawing" width="90%" height="75%" align="center">
+<img src="https://github.com/UshanKaushalya/D24-Hostel/ScreenShots/Screenshot 2023-04-19 at 20.08.10.png" alt="drawing" width="90%" height="75%" align="center">
 
-<img src="https://github.com/UshanKaushalya/Hostal-Management/blob/master/Hostal-Managements/Hostal-Management/src/lk/ijse/hostal_management/assets/readme-image/image-7.png" alt="drawing" width="90%" height="75%" align="center">
