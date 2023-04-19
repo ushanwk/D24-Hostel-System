@@ -2,6 +2,7 @@ package lk.ijse.hibernate.d24.bo.custom.impl;
 
 import lk.ijse.hibernate.d24.bo.custom.ReservationBO;
 import lk.ijse.hibernate.d24.dto.ReservationDTO;
+import lk.ijse.hibernate.d24.dto.StudentDTO;
 import lk.ijse.hibernate.d24.entity.ReservationEntity;
 import lk.ijse.hibernate.d24.entity.RoomEntity;
 import lk.ijse.hibernate.d24.entity.StudentEntity;
@@ -110,5 +111,23 @@ public class ReservationBOImpl implements ReservationBO {
     @Override
     public String nextResId() {
         return reservationRepository.nextResId();
+    }
+
+    @Override
+    public ArrayList<StudentDTO> getAllNotPay() {
+        ArrayList<StudentDTO> studentList = new ArrayList<>();
+
+        studentList.addAll(reservationRepository.getAllNotPay().stream().map(studentEntity -> {
+            return new StudentDTO(
+                    studentEntity.getStudentId(),
+                    studentEntity.getName(),
+                    studentEntity.getAddress(),
+                    studentEntity.getGender(),
+                    studentEntity.getDOB(),
+                    studentEntity.getTel()
+            );
+        }).collect(Collectors.toList()));
+
+        return studentList;
     }
 }

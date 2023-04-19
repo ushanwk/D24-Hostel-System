@@ -2,6 +2,7 @@ package lk.ijse.hibernate.d24.repository.custom.impl;
 
 import lk.ijse.hibernate.d24.entity.ReservationEntity;
 import lk.ijse.hibernate.d24.entity.RoomEntity;
+import lk.ijse.hibernate.d24.entity.StudentEntity;
 import lk.ijse.hibernate.d24.repository.custom.ReservationRepository;
 import lk.ijse.hibernate.d24.util.SessionFactoryConfig;
 import org.hibernate.Session;
@@ -105,5 +106,18 @@ public class ReservationRepositoryImpl implements ReservationRepository {
 
             return id;
         }
+    }
+
+    @Override
+    public List<StudentEntity> getAllNotPay() {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<StudentEntity> allNotPay = session.createQuery("select student from ReservationEntity where status like: ID").setParameter("ID", "NOT PAY").list();
+
+        transaction.commit();
+        session.close();
+
+        return allNotPay;
     }
 }

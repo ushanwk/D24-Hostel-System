@@ -172,5 +172,10 @@
             <Font name="Helvetica Bold" size="30.0" />
          </font>
       </Text>
+      <JFXButton layoutX="1173.0" layoutY="761.0" onAction="#btnNotPayOnAcion" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Not Pay" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
