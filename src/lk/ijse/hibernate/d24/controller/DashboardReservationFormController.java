@@ -11,8 +11,6 @@ import lk.ijse.hibernate.d24.bo.BOFactory;
 import lk.ijse.hibernate.d24.bo.custom.ReservationBO;
 import lk.ijse.hibernate.d24.bo.custom.RoomBO;
 import lk.ijse.hibernate.d24.dto.ReservationDTO;
-import lk.ijse.hibernate.d24.repository.RepositoryFactory;
-import lk.ijse.hibernate.d24.repository.custom.ReservationRepository;
 import lk.ijse.hibernate.d24.util.Navigation;
 import lk.ijse.hibernate.d24.util.Routes;
 

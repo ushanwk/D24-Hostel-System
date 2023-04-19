@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import lk.ijse.hibernate.d24.bo.BOFactory;
@@ -12,6 +13,7 @@ import lk.ijse.hibernate.d24.bo.custom.StudentBO;
 import lk.ijse.hibernate.d24.dto.StudentDTO;
 import lk.ijse.hibernate.d24.util.Navigation;
 import lk.ijse.hibernate.d24.util.Routes;
+import lk.ijse.hibernate.d24.util.Validation;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -30,6 +32,9 @@ public class DashboardStudentFormController {
     public JFXComboBox cmbGender;
     public JFXComboBox cmbGenderSearch;
     public AnchorPane secondaryPane;
+    public Text txtInvalidTelError;
+    public Text txtInvalidDateError;
+    public Text txtInvalidNameError;
 
 
     StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.STUDENT);
@@ -39,22 +44,59 @@ public class DashboardStudentFormController {
         cmbGender.getItems().add("Male");
         cmbGender.getItems().add("Female");
 
+        txtInvalidDateError.setVisible(false);
+        txtInvalidNameError.setVisible(false);
+        txtInvalidTelError.setVisible(false);
+
         txtFldStudentIdReg.setText(studentBO.nextStudentId());
     }
 
-    public void btnRegisterOnAction(ActionEvent actionEvent) {
-        studentBO.saveStudent(new StudentDTO(
-                txtFldStudentIdReg.getText(),
-                txtFldNameReg.getText(),
-                txtFldAddressReg.getText(),
-                String.valueOf(cmbGender.getValue()),
-                Date.valueOf(txtFldDobReg.getText()),
-                txtFldTelReg.getText()
-        ));
+    boolean isAfter = true;
 
-        new Alert(Alert.AlertType.CONFIRMATION,"Student Registered Successfully").show();
+    public void btnRegisterOnAction(ActionEvent actionEvent) throws InterruptedException {
 
-        initialize();
+        boolean isSuccess = false;
+
+        if(Validation.validateLettersOnly(txtFldNameReg.getText())){
+            isSuccess = true;
+        }else{
+            isSuccess = false;
+            isAfter = false;
+            txtInvalidNameError.setVisible(true);
+        }
+
+        if(Validation.validateDateOnly(txtFldDobReg.getText())){
+            isSuccess = true;
+        }else{
+            isSuccess = false;
+            isAfter = false;
+            txtInvalidDateError.setVisible(true);
+        }
+
+        if(Validation.validateNumbersOnly(txtFldTelReg.getText())){
+            isSuccess = true;
+        }else{
+            isSuccess = false;
+            isAfter = false;
+            txtInvalidTelError.setVisible(true);
+        }
+
+
+        if(isSuccess){
+            studentBO.saveStudent(new StudentDTO(
+                    txtFldStudentIdReg.getText(),
+                    txtFldNameReg.getText(),
+                    txtFldAddressReg.getText(),
+                    String.valueOf(cmbGender.getValue()),
+                    Date.valueOf(txtFldDobReg.getText()),
+                    txtFldTelReg.getText()
+            ));
+
+            new Alert(Alert.AlertType.CONFIRMATION,"Student Registered Successfully").show();
+
+            initialize();
+        }
+
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
@@ -93,7 +135,7 @@ public class DashboardStudentFormController {
 
         new Alert(Alert.AlertType.CONFIRMATION,"Student Updated Successfully").show();
 
-        clearSearch();
+        initialize();
     }
 
     public void btnDeleteOnAcion(ActionEvent actionEvent) {
@@ -108,7 +150,7 @@ public class DashboardStudentFormController {
         ));
 
         new Alert(Alert.AlertType.CONFIRMATION,"Student Deleted Successfully").show();
-        clearSearch();
+        initialize();
     }
 
     public void btnViewAllOnAcion(ActionEvent actionEvent) throws IOException {
@@ -141,5 +183,29 @@ public class DashboardStudentFormController {
             clearSearch();
         }
 
+    }
+
+    public void txtGenderOnMouseClicked(MouseEvent mouseEvent) {
+        if(!isAfter){ initialize();isAfter=true;}
+    }
+
+    public void txtStIdOnMouseClicked(MouseEvent mouseEvent) {
+        if(!isAfter){ initialize();isAfter=true;}
+    }
+
+    public void txtNameOnMouseClicked(MouseEvent mouseEvent) {
+        if(!isAfter){ initialize();isAfter=true;}
+    }
+
+    public void txtAddressOnMouseClicked(MouseEvent mouseEvent) {
+        if(!isAfter){ initialize();isAfter=true;}
+    }
+
+    public void txtDobOnMouseClicked(MouseEvent mouseEvent) {
+        if(!isAfter){ initialize();isAfter=true;}
+    }
+
+    public void txtTelOnMouseClicked(MouseEvent mouseEvent) {
+        if(!isAfter){ initialize();isAfter=true;}
     }
 }

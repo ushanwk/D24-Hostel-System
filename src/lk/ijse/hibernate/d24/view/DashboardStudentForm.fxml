@@ -31,31 +31,41 @@
       </Text>
       <Group layoutX="134.0" layoutY="444.0">
          <children>
-            <JFXTextField fx:id="txtFldStudentIdReg" focusColor="WHITE" labelFloat="true" prefHeight="40.0" prefWidth="291.0" promptText="Student ID" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldStudentIdReg" focusColor="WHITE" labelFloat="true" onMouseClicked="#txtStIdOnMouseClicked" prefHeight="40.0" prefWidth="291.0" promptText="Student ID" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtFldNameReg" focusColor="WHITE" labelFloat="true" layoutY="101.0" prefHeight="40.0" prefWidth="299.0" promptText="Name" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldNameReg" focusColor="WHITE" labelFloat="true" layoutY="101.0" onMouseClicked="#txtNameOnMouseClicked" prefHeight="40.0" prefWidth="299.0" promptText="Name" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtFldAddressReg" focusColor="WHITE" labelFloat="true" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Address" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldAddressReg" focusColor="WHITE" labelFloat="true" layoutY="204.0" onMouseClicked="#txtAddressOnMouseClicked" prefHeight="40.0" prefWidth="293.0" promptText="Address" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtFldDobReg" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="101.0" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldDobReg" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="101.0" onMouseClicked="#txtDobOnMouseClicked" prefHeight="40.0" prefWidth="293.0" promptText="Date Of Birth" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtFldTelReg" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="204.0" prefHeight="40.0" prefWidth="293.0" promptText="Telephone" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtFldTelReg" focusColor="WHITE" labelFloat="true" layoutX="350.0" layoutY="204.0" onMouseClicked="#txtTelOnMouseClicked" prefHeight="40.0" prefWidth="293.0" promptText="Telephone" stylesheets="@css/StudentTextField.css" unFocusColor="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXTextField>
+            <Text fx:id="txtInvalidNameError" fill="RED" layoutX="217.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Name" wrappingWidth="91.09397888183594">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtInvalidDateError" fill="RED" layoutX="572.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Date" wrappingWidth="76.82206726074219">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
          </children>
       </Group>
       <JFXButton layoutX="688.0" layoutY="760.0" onAction="#btnRegisterOnAction" style="-fx-border-color: white;" stylesheets="@css/StudentButton.css" text="Register" textFill="WHITE">
@@ -139,8 +149,13 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXComboBox fx:id="cmbGender" focusColor="WHITE" labelFloat="true" layoutX="131.0" layoutY="761.0" prefHeight="29.0" prefWidth="191.0" promptText="Gender" stylesheets="@css/StudentComboBox.css" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbGender" focusColor="WHITE" labelFloat="true" layoutX="131.0" layoutY="761.0" onMouseClicked="#txtGenderOnMouseClicked" prefHeight="29.0" prefWidth="191.0" promptText="Gender" stylesheets="@css/StudentComboBox.css" unFocusColor="WHITE" />
       <JFXComboBox fx:id="cmbGenderSearch" focusColor="WHITE" labelFloat="true" layoutX="912.0" layoutY="760.0" prefHeight="29.0" prefWidth="191.0" promptText="Gender" stylesheets="@css/StudentComboBox.css" unFocusColor="WHITE" />
+      <Text fx:id="txtInvalidTelError" fill="RED" layoutX="715.0" layoutY="711.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Tel" wrappingWidth="91.09397888183594">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
 
    </children>
 </AnchorPane>
