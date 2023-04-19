@@ -33,6 +33,8 @@ public class DashboardRoomFormController {
         clearReg();
         clearSearch();
 
+        txtFldRoomTypeIdReg.setText(roomBO.nextRoomId());
+
         try {
             txtAcRooms.setText(String.valueOf(roomBO.getRoomCount("RM-7896")));
         }catch (Exception e){
@@ -85,6 +87,8 @@ public class DashboardRoomFormController {
 
         new Alert(Alert.AlertType.CONFIRMATION,"Room Added Successfully").show();
         clearReg();
+
+        initialize();
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
@@ -120,6 +124,8 @@ public class DashboardRoomFormController {
 
         new Alert(Alert.AlertType.CONFIRMATION,"Room Updated Successfully").show();
         clearSearch();
+
+        initialize();
     }
 
     public void btnDeleteOnAcion(ActionEvent actionEvent) {
@@ -131,6 +137,8 @@ public class DashboardRoomFormController {
         ));
         new Alert(Alert.AlertType.CONFIRMATION,"Room Deleted Successfully").show();
         clearSearch();
+
+        initialize();
     }
 
     public void btnViewAllOnAcion(ActionEvent actionEvent) throws IOException {

@@ -13,4 +13,5 @@ public interface RoomBO extends SuperBO {
     public RoomDTO searchRoom(String id);
     public int getRoomCount(String id);
     public ArrayList<RoomDTO> getAllRooms();
+    public String nextRoomId();
 }

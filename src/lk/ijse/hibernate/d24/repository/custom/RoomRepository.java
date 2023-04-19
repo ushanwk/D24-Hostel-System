@@ -5,4 +5,5 @@ import lk.ijse.hibernate.d24.repository.CrudRepository;
 
 public interface RoomRepository extends CrudRepository<RoomEntity> {
     public int getRoomCount(String id);
+    public String findNextRoomID();
 }

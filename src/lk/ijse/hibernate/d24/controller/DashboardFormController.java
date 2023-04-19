@@ -37,9 +37,6 @@ public class DashboardFormController {
 
     public void btnUserOnAction(ActionEvent actionEvent) throws IOException {
         Navigation.navigate(Routes.USER, secondaryPane);
-        StudentRepository studentRepository = new StudentRepositoryImpl();
-
-        System.out.println(studentRepository.findNextStudentID());
     }
 
     public void btnLogOutOnAction(ActionEvent actionEvent) throws IOException {

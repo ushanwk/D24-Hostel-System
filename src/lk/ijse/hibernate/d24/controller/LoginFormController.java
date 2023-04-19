@@ -3,9 +3,12 @@ package lk.ijse.hibernate.d24.controller;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.hibernate.d24.bo.BOFactory;
+import lk.ijse.hibernate.d24.bo.custom.UserBO;
 import lk.ijse.hibernate.d24.util.Navigation;
 import lk.ijse.hibernate.d24.util.Routes;
 
@@ -19,17 +22,27 @@ public class LoginFormController {
     public ImageView imgOpenEye;
     public ImageView imgCloseEye;
 
+    UserBO userBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.USER);
+
+    static String username;
+
     public void initialize(){
         txtFldPassword.setVisible(false);
         imgOpenEye.setVisible(false);
     }
 
     public void btnSignInOnActiom(ActionEvent actionEvent) throws IOException {
-        if(txtFldUsername.getText() .equals("user") && txtPassFldPassword.getText() .equals("1234") || txtFldPassword.getText() .equals("1234")){
+
+        username = txtFldUsername.getText();
+
+        String password = userBO.getPassword(txtFldUsername.getText());
+
+        if(txtPassFldPassword.getText() .equals(password) || txtFldPassword.getText() .equals(password)){
             Navigation.navigate(Routes.DASHBOARDFORM, primaryPane);
         }else{
-            System.out.println("Not Done");
+            new Alert(Alert.AlertType.WARNING,"Invalid Username or Password").show();
         }
+
     }
 
     public void btnCloseOnAction(ActionEvent actionEvent) {

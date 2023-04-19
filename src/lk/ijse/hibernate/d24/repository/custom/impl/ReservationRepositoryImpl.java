@@ -6,6 +6,7 @@ import lk.ijse.hibernate.d24.repository.custom.ReservationRepository;
 import lk.ijse.hibernate.d24.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -73,5 +74,36 @@ public class ReservationRepositoryImpl implements ReservationRepository {
         session.close();
 
         return allReservations;
+    }
+
+    @Override
+    public String nextResId() {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("select resId from ReservationEntity order by resId desc");
+
+        String nextId = "R001";
+
+        if (query.list().size() == 0) {
+            return nextId;
+        } else {
+            String id = (String) query.list().get(0);
+
+            String[] SUs = id.split("R00");
+
+            for (String a : SUs) {
+                id = a;
+            }
+
+            int idNum = Integer.valueOf(id);
+
+            id = "R00" + (idNum + 1);
+
+            transaction.commit();
+            session.close();
+
+            return id;
+        }
     }
 }

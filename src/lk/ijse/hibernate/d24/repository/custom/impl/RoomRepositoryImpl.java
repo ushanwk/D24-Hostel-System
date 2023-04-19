@@ -90,4 +90,36 @@ public class RoomRepositoryImpl implements RoomRepository {
 
         return qty;
     }
+
+    @Override
+    public String findNextRoomID() {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("select roomTypeId from RoomEntity order by roomTypeId desc");
+
+        String nextId = "RM-0001";
+
+        if(query.list().size() == 0){
+            return nextId;
+        }else{
+            String id = (String)query.list().get(0);
+
+            String[] SUs = id.split("RM-");
+
+            for (String a:SUs) {
+                id = a;
+            }
+
+            int idNum = Integer.valueOf(id);
+
+            id = "RM-" + (idNum+1);
+
+            transaction.commit();
+            session.close();
+
+            return id;
+        }
+
+    }
 }

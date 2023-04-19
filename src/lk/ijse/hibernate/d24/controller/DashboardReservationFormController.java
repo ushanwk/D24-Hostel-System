@@ -41,6 +41,8 @@ public class DashboardReservationFormController {
         cmbStatusReg.getItems().add("PAY");
         cmbStatusReg.getItems().add("NOT PAY");
 
+        txtReservationIdReg.setText(reservationBO.nextResId());
+
         try {
             txtAcRooms.setText(String.valueOf(roomBO.getRoomCount("RM-7896")));
         }catch (Exception e){
@@ -81,6 +83,8 @@ public class DashboardReservationFormController {
         }catch (Exception e){
             new Alert(Alert.AlertType.ERROR,"Invalid Student ID or Room ID").show();
         }
+
+        initialize();
 
     }
 
@@ -143,6 +147,8 @@ public class DashboardReservationFormController {
 
         new Alert(Alert.AlertType.CONFIRMATION,"Reservation Updated Successfully").show();
         clearSearch();
+
+        initialize();
     }
 
     public void btnDeleteOnAcion(ActionEvent actionEvent) {

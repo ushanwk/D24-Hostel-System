@@ -1,36 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="904.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.d24.controller.UserFormController">
+<AnchorPane fx:id="pane" prefHeight="904.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.d24.controller.UserFormController">
    <children>
       <ImageView fitHeight="904.0" fitWidth="1700.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assest/UserFormSketch.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="774.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="774.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assest/UserFormLogo.png" />
          </image>
       </ImageView>
-      <Text fill="#159895" layoutX="624.0" layoutY="349.0" onMousePressed="#txtAccountDetailsOnMouseClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Details">
+      <Text fx:id="txtName" fill="#159895" layoutX="566.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ushan Kaushalya" textAlignment="CENTER" wrappingWidth="568.0000066757202">
          <font>
-            <Font name="Helvetica Bold" size="18.0" />
+            <Font name="Helvetica Bold" size="30.0" />
          </font>
       </Text>
-      <Text fill="#159895" layoutX="787.0" layoutY="349.0" onMousePressed="#txtUpdateDetailsOnMouseClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Details">
+      <Text fill="#159895" layoutX="660.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :">
          <font>
-            <Font name="Helvetica Bold" size="18.0" />
+            <Font size="20.0" />
          </font>
       </Text>
-      <Line fx:id="lineAccountDetails" endX="36.17230224609375" endY="-3.0517578125E-5" layoutX="724.0" layoutY="355.0" startX="-100.0" stroke="#159895" strokeWidth="3.0" />
-      <Line fx:id="lineUpdateDetails" endX="23.9481201171875" layoutX="888.0" layoutY="356.0" startX="-100.0" stroke="#159895" strokeWidth="3.0" />
-      <AnchorPane fx:id="pane" layoutX="567.0" layoutY="371.0" prefHeight="428.0" prefWidth="568.0" />
+      <Text fill="#159895" layoutX="660.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtUsername" fill="#159895" layoutX="762.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPassword" fill="#159895" layoutX="762.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1234">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="879.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tel :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtTel" fill="#159895" layoutX="920.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="071 4742066">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="620.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Username &amp; Password">
+         <font>
+            <Font name="Helvetica Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#159895" layoutX="640.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Username :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtCurrentUsername" layoutX="809.0" layoutY="547.0" prefHeight="27.0" prefWidth="249.0" />
+      <Text fill="#159895" layoutX="640.0" layoutY="614.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Username :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNewUsername" layoutX="784.0" layoutY="594.0" prefHeight="27.0" prefWidth="274.0" />
+      <Text fill="#159895" layoutX="640.0" layoutY="658.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNewPassword" layoutX="778.0" layoutY="638.0" prefHeight="27.0" prefWidth="280.0" />
+      <Text fill="#159895" layoutX="639.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtConfirmPassword" layoutX="806.0" layoutY="680.0" prefHeight="27.0" prefWidth="252.0" />
+      <JFXButton layoutX="961.0" layoutY="740.0" onAction="#btnSaveChangesOnAction" style="-fx-background-color: #159895;" text="Save Changes" textFill="WHITE" />
    </children>
 </AnchorPane>

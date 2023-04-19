@@ -79,4 +79,9 @@ public class RoomBOImpl implements RoomBO {
 
         return roomList;
     }
+
+    @Override
+    public String nextRoomId() {
+        return roomRepository.findNextRoomID();
+    }
 }

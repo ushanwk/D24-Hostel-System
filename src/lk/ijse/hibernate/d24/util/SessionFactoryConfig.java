@@ -3,6 +3,7 @@ package lk.ijse.hibernate.d24.util;
 import lk.ijse.hibernate.d24.entity.ReservationEntity;
 import lk.ijse.hibernate.d24.entity.RoomEntity;
 import lk.ijse.hibernate.d24.entity.StudentEntity;
+import lk.ijse.hibernate.d24.entity.UserEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -21,6 +22,7 @@ public class SessionFactoryConfig {
                 .addAnnotatedClass(StudentEntity.class)
                 .addAnnotatedClass(RoomEntity.class)
                 .addAnnotatedClass(ReservationEntity.class)
+                .addAnnotatedClass(UserEntity.class)
                 .buildSessionFactory();
     }
 

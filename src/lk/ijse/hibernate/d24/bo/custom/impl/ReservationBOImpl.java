@@ -106,4 +106,9 @@ public class ReservationBOImpl implements ReservationBO {
 
         return allRes;
     }
+
+    @Override
+    public String nextResId() {
+        return reservationRepository.nextResId();
+    }
 }

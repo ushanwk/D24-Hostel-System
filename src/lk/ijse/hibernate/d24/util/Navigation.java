@@ -60,11 +60,6 @@ public class Navigation {
                 window.setTitle("");
                 break;
 
-            case USERDETAILS:
-                initUI("UserAccountDetailsForm.fxml");
-                window.setTitle("");
-                break;
-
             default:
                 new Alert(Alert.AlertType.ERROR, "Not suitable UI found!").show();
         }
