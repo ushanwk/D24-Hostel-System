@@ -1,8 +1,5 @@
 # D24-Hostel
 Hibernate small project
-# D24-Hostel
-
-Hibernate small project
 
 <img src="https://github.com/UshanKaushalya/D24-Hostel/ScreenShots/Screenshot 2023-04-19 at 20.07.08.png" alt="drawing" width="90%" height="75%" align="center">
 
